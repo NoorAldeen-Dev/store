@@ -51,6 +51,14 @@ module.exports = {
                 test: /\.css$/,
                 use: [cssp.loader, "css-loader"],
               },
+              {
+
+                test: require.resolve('jquery'),
+                loader: 'expose-loader',
+                options: {
+                  exposes: ['$', 'jQuery'],
+                }
+              },
               
         ],
     },
