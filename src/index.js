@@ -31,5 +31,71 @@ $(function(){
         alert("أضيف المنتج إلى عربة الشراء");
     });
     $("#copytime").html(new Date().getFullYear());
+    $(".product-option").click(function(){
+        $(this).siblings(".product-option").removeClass("active");
+        $(this).addClass("active");
+    });
+    
+    $("[data-quantity]").change(function(){
+        var newQuantity =$(this).val();
+        var parent = $(this).parents("[data-product-info]");
+        var price = parent.attr("data-product-price");
+        var totalprice = newQuantity * price;
+        parent.find(".resultq").text(totalprice+ "$");
+        calculateTotalPrice();
+    });
+    $("[data-quantity]").each(function(){
+        var newQuantity =$(this).val();
+        var parent = $(this).parents("[data-product-info]");
+        var price = parent.attr("data-product-price");
+        var totalprice = newQuantity * price; 
+        parent.find(".resultq").text(totalprice+ "$");
+        calculateTotalPrice();
+      });
+      function calculateTotalPrice(){
+        var totalPriceForAllProducts =0;
+        $("[data-product-info]").each(function(){
+            var pricePerUnit = $(this).attr("data-product-price");
+            var quantity = $(this).find("[data-quantity]").val();
+            var totalPriceForProduct = pricePerUnit * quantity;
+            totalPriceForAllProducts = totalPriceForAllProducts + totalPriceForProduct;
+          }); 
+          $("#total-price").text(totalPriceForAllProducts+"$");
+      }
+      $(".custom-btn-danger").click(function(){
+        $(this).parents("[data-product-info]").remove();
+        calculateTotalPrice();
+      });
+
+      var citiesByCountry ={
+        sa:["جدة","الرياض"],
+        eg:["الاسكندرية" , "القاهرة"],
+        jo:["الزرقاء" , "عمان"],
+        sy:["حلب" , "دمشق" ,"حماه"]
+      }
+      $('#form-checkout select[name="country"]').change(function(){
+        var country = $(this).val();
+        var cities = citiesByCountry[country];
+        $('#form-checkout select[name="city"]').empty();
+        $('#form-checkout select[name="city"]').append('<option disabled selected value="">اختر المدينة</option>');
+        cities.forEach(function(city){
+            var newOption = $("<option></option");
+            newOption.text(city);
+            newOption.val(city);
+            $('#form-checkout select[name="city"]').append(newOption);
+        });
+      });
+      $('#form-checkout input[name="payment-method"]').change(function(){
+        var paymentMethod = $(this).val();
+
+        if(paymentMethod === "on-delivary"){
+            $("#credit-card-info input").prop("disabled", true);
+        }
+        else{
+            $("#credit-card-info input").prop("disabled", false);
+        }
+        $("#credit-card-info").toggle();
+      });
+      
 });
 

@@ -67,6 +67,18 @@ module.exports = {
             filename:"index.html",
             template:"./src/index.html"
         }),
+        new hx({
+            filename:"product.html",
+            template:"./src/product.html"
+        }),
+        new hx({
+            filename:"checkout.html",
+            template:"./src/checkout.html"
+        }),
+        new hx({
+            filename:"payment.html",
+            template:"./src/payment.html"
+        }),
         new cssp({
             filename:"style.css",
         }),

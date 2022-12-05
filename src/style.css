@@ -234,9 +234,7 @@ nav .navbar-nav li.active:hover a.nav-link{
     margin-bottom: 20px;
 }
 .custom-thumbnail img {
-    height: 240px;
     width: 100%;
-    max-width: 250px;
     margin: 0 auto;
     display: block;
 }
@@ -450,8 +448,255 @@ nav .navbar-nav li.active:hover a.nav-link{
 #social-icons a{
     text-decoration: none;
 }
-/*
+/*****************************************************************************
+**************************************************************
+Product Page
+******************************************************************************
+**************************************************************/
+.custom-breadcrumb {
+    padding: 25px 0;
+}
+.custom-breadcrumb a{
+    color: #555;
+    text-decoration: none;
+}
+.custom-breadcrumb a:hover{
+    color: #f8ad47;
+}
+.custom-breadcrumb li+li::before{
+    content: ">";
+    color: #555;
+    padding: 0 5px;
+}
+.custom-breadcrumb .active{
+    color: #bfbfbf;
+}
+#carousel-product-images .carousel-indicators{
+    position: relative;
+    top: -35px;
+    right: 0;
+}
+#carousel-product-images .carousel-indicators img{
+    height: 75px;
+    width: 75px;
+    background-color: white;
+    border: 2px solid #ddddd8;
+}
+#carousel-product-images .carousel-indicators img.active{
+    border-color: #f8ad47;
+}
+#carousel-product-images .carousel-item img{
+    border: 1px solid #ebebeb;
+    width: 100%;
+}
+.product-category{
+    color: #a9a9a9;
+}
+#form-product-selection h2
+{
+    font-size: 30px;
+    font-weight: 700;
+    margin:18px 0;
+}
+#form-product-selection .price{
+    font-size: 30px;
+    margin-top: 20px;
+}
+#form-product-selection>div+div{
+    border-top: 1px solid #ebebeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.product-option{
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    color: #c2c2c2;
+    margin: 3px 3px 9px 3px;
+}
+.product-option input{
+    display: none;
+}
+.product-option label{
+    font-weight: 700;
+}
+.product-option.active{
+    color: #f8ad47;
+    border-color: #f8ad47;
+}
+.color-option.active{
+    border-color: white;
+    outline: #000 solid 1px;
+}
+.product-quantity {
+    padding-bottom: 20px;
+}
+.product-quantity select{
+    width: 56px;
+    height: 34px;
+    padding: 6px 12px;
+    margin-right: 3px;
+    border-radius: 0;
+}
+.custom-btn-with-icon{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.heading-with-border-bottom{
+    border-bottom: 2px solid #ebebeb;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.heading-inline{
+    display: inline-block;
+    min-width: 250px;
+}
+.more-description,
+.comments,
+.suggestions{
+    border-top: 1px solid #ebebeb
+}
+.more-description p,
+.more-description ul{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.comments .d-flex {
+    margin: 15px;
+}
+.comments .d-flex img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    border: 1px solid #dfdfdf;
+}
+.comments>div+div{
+    border-top: 1px solid #ebebeb;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.comments .d-flex .media-heading{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.suggestions .custom-thumbnail{
+    margin-right: -8px;
+    margin-left: -8px;
+
+}
+/*************************************************************
+*********************************
+Checkout Page
+*********************************
+**************************************************************/
+h1.custom-heading{
+    font-size: 36px;
+    margin: 25px 0;
+}
+.custom-table .custom-media{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.custom-table .custom-media img{
+    height: 80px;
+    width: 80px;
+    border: 1px solid #ebebeb;
+    margin-left: 10px;
+}
+.custom-table .custom-media h4{
+    font-size: 18px;
+    margin: 12px 0;
+}
+.custom-table th , .custom-table td{
+    padding: 15px;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb;
+    font-size: 120%;
+}
+.custom-table td:not(:first-child){
+    text-align: center;
+}
+.custom-table th:first-child , .custom-table td:first-child{
+    width: 50%;
+}
+.custom-table th{
+    color: #c2c2c2;
+    font-weight: normal; 
+}
+.custom-table th:not(:first-child){
+    text-align: center;
+}
+.custom-table th:first-child{
+    padding-right: 20px;
+}
+.custom-table .quantity{
+    border-radius: 0;
+    height: 34px;
+    padding: 0px 8px;
+    width: 56px;
+    margin: auto;
+}
+.custom-btn-danger{
+    color: #ff5a5f;
+    border-color: #ff5a5f;
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 6px 16px;
+}
+.custom-btn-danger:hover,
+.custom-btn-danger:active,
+.custom-btn-danger:focus,
+.custom-btn-danger:active:focus,
+.custom-btn-danger:active:hover{
+    color: #c2101e;
+    border-color: #c2101e;
+    background-color: transparent;
+}
+.custom-table tfoot td{
+    border-bottom: none;
+    font-size: 150%;
+}
+.custom-btn-with-icon{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+/************************************************************
+**********************************
+Payment Page
+**********************************
+*************************************************************
+*/
+.custom-input-details{
+    border-width: 2px;
+    border-radius: 3px;
+    height: 46px;
+    padding: 0 16px;
+    font-size: 18px;
+    width: 97%;
+}
+.custom-input-details:focus{
+    border-color: #b86d07;
+    box-shadow: none;
+}
+#credit-card-info{
+    margin-right: 3%;
+}
+
+
+
+/************************************************************
+**********************************
 MEDIA QUERY
+**********************************
+*************************************************************
 */
 @media (max-width:1199.98px){
     .nav .navbar-nav li a.nav-link{
@@ -523,6 +768,13 @@ MEDIA QUERY
         font-size: 150%;
         margin-top: 10px;
     }
+    .product-option{
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        line-height: 40px;
+        font-size: 20px;
+    }
     
 }
 @media (max-width:767.98px){
@@ -560,6 +812,9 @@ MEDIA QUERY
     #footer-nav form .input-group{
         width: 100%;
     }
+    .resultq{
+        display: none;
+    }
 }
 @media (max-width:575.98px){
     .custom-navbar form.d-flex .custom-input{
@@ -574,4 +829,9 @@ MEDIA QUERY
     #brand-logos img{
         margin: 5px 15px ;
     }
+    #form-product-selection , .comments{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
+
