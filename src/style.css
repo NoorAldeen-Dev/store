@@ -14,6 +14,9 @@ body{
     color: #555;
     line-height: 1.429;
 }
+[type=email]{
+    direction: rtl;
+}
 .custom-navbar{
     border-bottom: 3px solid #eef0ea;
     width: 100%;
@@ -264,7 +267,7 @@ nav .navbar-nav li.active:hover a.nav-link{
     position: absolute;
     background-color: rgba(83, 204, 215, .5);
     height: 286px;
-    width: calc(100%-16px);
+    width: calc(100% - 16px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -642,6 +645,10 @@ h1.custom-heading{
     width: 56px;
     margin: auto;
 }
+.custom-table tfoot td{
+    border-bottom: none;
+    font-size: 150%;
+}
 .custom-btn-danger{
     color: #ff5a5f;
     border-color: #ff5a5f;
@@ -658,10 +665,7 @@ h1.custom-heading{
     border-color: #c2101e;
     background-color: transparent;
 }
-.custom-table tfoot td{
-    border-bottom: none;
-    font-size: 150%;
-}
+
 .custom-btn-with-icon{
     margin-top: 15px;
     margin-bottom: 10px;
@@ -689,8 +693,117 @@ Payment Page
 #credit-card-info{
     margin-right: 3%;
 }
+/*************************************************************
+*********************************
+Search Page
+*********************************
+**************************************************************/
+#form-advanced-search{
+    border: 1px solid #ebebeb;
+    padding-bottom: 20px;
+    display: table;
+    height: 0;
+}
+#form-advanced-search .custom-pane{
+    border: none;
+    padding: 5px;
+}
+#form-advanced-search .card-header{
+    background-color: transparent;
+    margin-bottom: 15px;
+    padding: 7px 10px 13px;
+}
+.custom-list-group>.list-group-item{
+    border: none;
+    padding: 0 10px 14px 0;
+}
+.custom-list-group>.list-group-item:last-child{
+    padding: 0 10px 0 0;
+}
+#form-advanced-search label{
+    cursor: pointer;
+    font-weight: bold;
+}
+.ui-slider{
+    margin: 25px 0 15px;
+    height: 2px !important;
+}
+.ui-slider .ui-slider-handle{
+    background-color: #f8ad47 !important;
+    border: none !important;
+    border-radius: 50% ;
+    height: 12px !important;
+    width: 12px !important;
+    top: -6px !important;
+}
+.ui-slider .ui-slider-range{
+    border: 1px solid #f8ad47 !important;
+    top: -1px !important;
+    background-color: #f8ad47 !important;
+}
+.custom-pagination{
+    margin: 25px 0;
+}
+.custom-pagination li a{
+    border: 1px solid #ebebeb;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 3px;
+    margin-left: 3px;
+    color: #c2c2c2;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+.custom-pagination li.active a{
+    background-color: #f8ad47;
+    color: white;
+    border-color: #f8ad47;
+}
+.custom-pagination li a:active,
+.custom-pagination li a:focus,
+.custom-pagination li a:hover{
+    color: #ab7731;
+    border-color: #ab7731;
+}
+#search-results .custom-thumbnail{
+    margin-right:-8px;
+    margin-left: -8px;
 
-
+}
+/************************************************************
+**********************************
+Contact Page
+**********************************
+*************************************************************
+*/
+#contact-options h4{
+    font-size: 18px;
+    padding-bottom: 12px;
+}
+.heading-with-border-bottom{
+    margin-bottom: 20px;
+}
+#contact-info{
+    margin-bottom: 25px;
+}
+#contact-info .fa-lg{
+    color: #f3af41;
+    font-size: 18px;
+    margin: 10px;
+}
+#contact-info span{
+    position: absolute;
+    top: 10px;
+}
+#contact-options{
+    margin-bottom: 25px;
+}
+#contact-options textarea{
+    height: 128px;
+}
 
 /************************************************************
 **********************************
@@ -774,6 +887,14 @@ MEDIA QUERY
         margin: 10px;
         line-height: 40px;
         font-size: 20px;
+    }
+    .ui-slider .ui-slider-handle{
+        height: 20px !important;
+        width: 20px !important;
+        top: -10px !important;
+    }
+    #form-subscription{
+        margin-bottom: 40px;
     }
     
 }

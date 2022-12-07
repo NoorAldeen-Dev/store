@@ -48,8 +48,8 @@ module.exports = {
                       ],
             },
             {
-                test: /\.css$/,
-                use: [cssp.loader, "css-loader"],
+                test:  /\.(sa|sc|c)ss$/,
+                use: [cssp.loader, "css-loader","sass-loader"],
               },
               {
 
@@ -78,6 +78,14 @@ module.exports = {
         new hx({
             filename:"payment.html",
             template:"./src/payment.html"
+        }),
+        new hx({
+            filename:"search.html",
+            template:"./src/search.html"
+        }),
+        new hx({
+            filename:"contact.html",
+            template:"./src/contact.html"
         }),
         new cssp({
             filename:"style.css",
