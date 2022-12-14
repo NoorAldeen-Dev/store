@@ -13,6 +13,7 @@ body{
     font-size: 14px;
     color: #555;
     line-height: 1.429;
+    
 }
 [type=email]{
     direction: rtl;
@@ -814,11 +815,17 @@ MEDIA QUERY
 @media (max-width:1199.98px){
     .nav .navbar-nav li a.nav-link{
         padding: 8px;
+        
     }
 }
 @media (max-width:991px) and (min-width:768px){
     .custom-thumbnail img{
         height: 200px;
+    }
+}
+@media (min-width:991.98px){
+    .custom-thumbnail img{
+        height: 286px;
     }
 }
 @media (max-width:991.98px){
@@ -896,6 +903,7 @@ MEDIA QUERY
     #form-subscription{
         margin-bottom: 40px;
     }
+
     
 }
 @media (max-width:767.98px){
@@ -936,7 +944,15 @@ MEDIA QUERY
     .resultq{
         display: none;
     }
+    .custom-table td, .custom-table th {
+        padding: 10px;
+        font-size: 100%;
+    }
+    .custom-table td:first-child, .custom-table th:first-child {
+        width: 40%;
+    }
 }
+
 @media (max-width:575.98px){
     .custom-navbar form.d-flex .custom-input{
         width: 80%;
@@ -953,6 +969,12 @@ MEDIA QUERY
     #form-product-selection , .comments{
         padding-left: 15px;
         padding-right: 15px;
+    }
+    .custom-table .custom-media h4{
+        font-size: 15px;
+    }
+    #carousel-featured .product-details p{
+        padding: 25px;
     }
 }
 

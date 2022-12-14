@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
-import "./scss/style.scss";
 import './style.css';
 import "jquery/dist/jquery.min";
 import "popper.js/dist/esm/popper.min.js";
